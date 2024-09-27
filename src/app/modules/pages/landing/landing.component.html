@@ -1,0 +1,256 @@
+<div class="flex flex-col min-h-[100dvh]">
+    <header class="px-4 lg:px-6 h-14 flex items-center bg-blue-600 text-white">
+        <a class="flex items-center justify-center" href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6">
+                <path d="m5 8 6 6"></path>
+                <path d="m4 14 6-6 2-3"></path>
+                <path d="M2 5h12"></path>
+                <path d="M7 2h1"></path>
+                <path d="m22 22-5-10-5 10"></path>
+                <path d="M14 18h6"></path>
+            </svg>
+            <span class="sr-only">Translator App</span>
+        </a>
+        <nav class="ml-auto flex gap-4 sm:gap-6">
+            <a class="text-sm font-medium hover:underline underline-offset-4" href="#">
+                About
+            </a>
+            <a class="text-sm font-medium hover:underline underline-offset-4" href="#features">
+                Features
+            </a>
+            <a class="text-sm font-medium hover:underline underline-offset-4" href="#">
+                Team
+            </a>
+            <a class="text-sm font-medium hover:underline underline-offset-4" href="#">
+                Conclusion
+            </a>
+        </nav>
+    </header>
+    <main class="flex-1">
+        <section id="about" class="w-full py-12 md:py-24 lg:py-32">
+            <div class="container mx-auto px-4 md:px-6">
+                <div class="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
+                    <div class="flex flex-col justify-center space-y-4">
+                        <div class="space-y-2">
+                            <h1 class="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl">
+                                Presentando la Aplicación de Traductor de Texto
+                            </h1>
+                            <p class="max-w-[600px] text-gray-600 md:text-xl">
+                                Nuestra aplicación está diseñada para hacer que la traducción de idiomas sea fácil y
+                                accesible
+                                para todos. Con
+                                características poderosas y una interfaz amigable, puedes traducir texto entre múltiples
+                                idiomas
+                                de manera fluida.
+                            </p>
+                        </div>
+                        <div class="flex flex-col gap-2 min-[400px]:flex-row">
+                            <a class="inline-flex h-10 items-center justify-center rounded-md bg-blue-600 text-white px-8 text-sm font-medium shadow transition-colors hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-black disabled:pointer-events-none disabled:opacity-50"
+                                routerLink="/translator">
+                                Pruébalo Ahora
+                            </a>
+                            <a class="inline-flex h-10 items-center justify-center rounded-md border border-gray-300 bg-white px-8 text-sm font-medium shadow-sm transition-colors hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-300 disabled:pointer-events-none disabled:opacity-50"
+                                href="https://docs.google.com/document/d/1zqXG7Yl3mIPsyuYAY59FeFKJnXxp0p_eDUsAOgItIT8/edit?usp=sharing"
+                                target="_blank">
+                                Aprende Más
+                            </a>
+                        </div>
+                    </div>
+                    <img src="../../../../assets/images/hero.jpg" width="550" height="550" alt="Hero"
+                        class="mx-auto aspect-video overflow-hidden rounded-xl object-cover sm:w-full lg:order-last lg:aspect-square" />
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="w-full py-12 md:py-24 lg:py-32">
+            <div class="container mx-auto px-4 md:px-6">
+                <div class="flex flex-col items-center justify-center space-y-4 text-center">
+                    <div class="space-y-2">
+                        <div class="inline-block rounded-lg bg-gray-200 px-3 py-1 text-sm">Características Clave</div>
+                        <h2 class="text-3xl font-bold tracking-tighter sm:text-5xl">Caracteristicas que tienes al
+                            Alcance
+                        </h2>
+                        <p class="max-w-[900px] text-gray-600 md:text-xl lg:text-base xl:text-xl mx-auto">
+                            Nuestra aplicación de traductor de texto ofrece una variedad de características para hacer
+                            que tu
+                            experiencia de
+                            traducción de idiomas sea fluida y eficiente.
+                        </p>
+                    </div>
+                </div>
+                <div class="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
+                    <div class="flex flex-col justify-center space-y-4">
+                        <ul class="grid gap-6">
+                            <li>
+                                <div class="grid gap-1">
+                                    <h3 class="text-xl font-bold">Guarda tus traducciones</h3>
+                                    <p class="text-gray-600">
+                                        El traductor de texto es capaz de guardas tus consultas, como tambien puedes
+                                        eliminarlas y restaurarlas.
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="grid gap-1">
+                                    <h3 class="text-xl font-bold">Editar traducciones</h3>
+                                    <p class="text-gray-600">
+                                        El traductor de texto tiene la funcionalidad de editar una consulta que hayas
+                                        hecho
+                                        anteriormente.
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="grid gap-1">
+                                    <h3 class="text-xl font-bold">Soporte Multilingüe</h3>
+                                    <p class="text-gray-600">
+                                        Traduce entre una amplia gama de idiomas, incluyendo los populares y los menos
+                                        conocidos.
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <img src="../../../../assets/images/traductor-image.jpg" width="550" height="310" alt="Image"
+                        class="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full lg:order-last" />
+                </div>
+            </div>
+        </section>
+
+        <section id="tecnologias" class="w-full py-12 md:py-24 lg:py-32 bg-muted">
+            <div class="container px-4 md:px-6 mx-auto">
+                <div class="flex flex-col items-center justify-center space-y-4 text-center">
+                    <div class="space-y-2">
+                        <div class="inline-block rounded-lg bg-gray-200 px-3 py-1 text-sm">Tecnologias Utilizadas</div>
+                        <h2 class="text-3xl font-bold tracking-tighter sm:text-5xl">Construido con las Mejores
+                            Herramientas</h2>
+                        <p class="max-w-[900px] text-muted-foreground md:text-xl lg:text-base xl:text-xl mx-auto">
+                            Nuestra aplicación está construida utilizando tecnologías modernas que garantizan un
+                            rendimiento
+                            óptimo y una experiencia de usuario excepcional.
+                        </p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mt-12">
+                    <div class="flex flex-col items-center justify-center space-y-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="h-12 w-12">
+                            <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"></polygon>
+                            <line x1="12" x2="12" y1="22" y2="15.5"></line>
+                            <polyline points="22 8.5 12 15.5 2 8.5"></polyline>
+                            <polyline points="2 15.5 12 8.5 22 15.5"></polyline>
+                            <line x1="12" x2="12" y1="2" y2="8.5"></line>
+                        </svg>
+                        <h3 class="text-xl font-bold">Angular</h3>
+                        <p class="text-muted-foreground">Biblioteca de JavaScript para construir interfaces de usuario
+                        </p>
+                    </div>
+                    <div class="flex flex-col items-center justify-center space-y-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="h-12 w-12">
+                            <path
+                                d="M10.165 6.598C9.954 7.478 9.64 8.36 9 9c-.64.64-1.521.954-2.402 1.165A6 6 0 0 0 8 22c7.732 0 14-6.268 14-14a6 6 0 0 0-11.835-1.402Z">
+                            </path>
+                            <path d="M5.341 10.62a4 4 0 1 0 5.279-5.28"></path>
+                        </svg>
+                        <h3 class="text-xl font-bold">Spring Boot</h3>
+                        <p class="text-muted-foreground">Framework de Java para el desarrollo de aplicaciones web.</p>
+                    </div>
+                    <div class="flex flex-col items-center justify-center space-y-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="h-12 w-12">
+                            <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                            <path d="M3 5V19A9 3 0 0 0 21 19V5"></path>
+                            <path d="M3 12A9 3 0 0 0 21 12"></path>
+                        </svg>
+                        <h3 class="text-xl font-bold">PostgreSQL</h3>
+                        <p class="text-muted-foreground">Sistema de gestión de bases de datos relacional.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="team" class="w-full py-12 md:py-24 lg:py-32">
+            <div class="container mx-auto px-4 md:px-6">
+                <div class="flex flex-col items-center justify-center space-y-4 text-center">
+                    <div class="space-y-2">
+                        <div class="inline-block rounded-lg bg-gray-200 px-3 py-1 text-sm">Conoce al Equipo</div>
+                        <h2 class="text-3xl font-bold tracking-tighter sm:text-5xl">
+                            El equipo Detrás de la Aplicación de Traductor
+                        </h2>
+                        <p class="max-w-[900px] text-gray-600 md:text-xl lg:text-base xl:text-xl mx-auto">
+                            Nuestro equipo se ha esforzado en crear la mejor solución de
+                            traducción de texto para ti.
+                        </p>
+                    </div>
+                </div>
+                <div class="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-3 lg:gap-12">
+                    <div class="flex flex-col items-center justify-center space-y-2">
+                        <img src="../../../../assets/images/roberto.png" width="120" height="120" alt="Team Member"
+                            class="rounded-full object-cover" />
+                        <h3 class="text-xl font-bold">Roberto Sánchez</h3>
+                        <p class="text-gray-600">Desarrollador</p>
+                    </div>
+                    <div class="flex flex-col items-center justify-center space-y-2">
+                        <img src="../../../../assets/images/default.jpg" width="120" height="120" alt="Team Member"
+                            class="rounded-full object-cover" />
+                        <h3 class="text-xl font-bold">Miguel Cuadros</h3>
+                        <p class="text-gray-600">Desarrollador</p>
+                    </div>
+                    <div class="flex flex-col items-center justify-center space-y-2">
+                        <img src="../../../../assets/images/diego.jpg" width="120" height="120" alt="Team Member"
+                            class="rounded-full object-cover" />
+                        <h3 class="text-xl font-bold">Diego Rojas</h3>
+                        <p class="text-gray-600">Desarrollador</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="conclusion" class="w-full py-12 md:py-24 lg:py-32 ">
+            <div class="container mx-auto px-4 md:px-6">
+                <div class="flex flex-col items-center justify-center space-y-4 text-center">
+                    <div class="space-y-2">
+                        <div class="inline-block rounded-lg bg-gray-200 px-3 py-1 text-sm">En Conclusión</div>
+                        <h2 class="text-3xl font-bold tracking-tighter sm:text-5xl">
+                            Traduce a varios lenguaje con Nuestra Aplicación de Traductor
+                        </h2>
+                        <p class="max-w-[900px] text-gray-600 md:text-xl lg:text-base xl:text-xl mx-auto">
+                            Nuestra aplicación de traductor de texto es la solución para todas tus
+                            necesidades de
+                            traducción de idiomas.
+                            Con sus características poderosas, interfaz amigable y un equipo dedicado.
+                        </p>
+                    </div>
+                    <div class="flex flex-col gap-2 min-[400px]:flex-row">
+                        <a class="inline-flex h-10 items-center justify-center rounded-md bg-blue-600 px-8 text-sm font-medium text-white shadow transition-colors hover:bg-blue-700  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 disabled:pointer-events-none disabled:opacity-50"
+                            routerLink="/translator">
+                            Pruébalo Ahora
+                        </a>
+                        <a class="inline-flex h-10 items-center justify-center rounded-md border border-gray-300 bg-white px-8 text-sm font-medium text-gray-700 shadow-sm transition-colors hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-300 disabled:pointer-events-none disabled:opacity-50"
+                            href="https://docs.google.com/document/d/1zqXG7Yl3mIPsyuYAY59FeFKJnXxp0p_eDUsAOgItIT8/edit?usp=sharing"
+                            target="_blank">
+                            Aprende Más
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer class="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
+        <p class="text-xs text-muted-foreground">© 2024 Translator App. All rights reserved.</p>
+        <nav class="sm:ml-auto flex gap-4 sm:gap-6">
+            <a class="text-xs hover:underline underline-offset-4" href="#">
+                Terms of Service
+            </a>
+            <a class="text-xs hover:underline underline-offset-4" href="#">
+                Privacy
+            </a>
+        </nav>
+    </footer>
+</div>

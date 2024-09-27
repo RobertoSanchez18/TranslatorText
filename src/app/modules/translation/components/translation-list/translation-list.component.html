@@ -1,0 +1,67 @@
+<h2 class="fs-5 d-flex gap-2 mb-2">Recientes
+    <img
+        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAYAAACpF6WWAAAAAXNSR0IArs4c6QAAAUZJREFUOE+1lNFRwzAQRDedQCWBTpJKCJWQToBKEioBnkbrOZ9PtvlAP5448tvdO+kO+od1+APzQdJ9z/41KJCTpKOkpwAD/CHpU9K1EhlBgbwXIISiANDXnKCCXiS9dCAf8Dsv4G9dAOfn7r7ty1A7XGwcgCkPBtj/6D0ZevutEy6eo3J/hzOLRQ0noxQ4njnlI5SryAghSIMQjIv/XP9WhujUUGLko7MGRcBuW8IIdfSqeVtQ96KljIDvfu5aXYqIiJIAN6tJDN1ygoaTUFeEM3gyFZ1SbODT0SgcR3BsGA2mJ4hdM5Ta5OOU2YCpXbyibvICarXZQd4xQOKFaSlzp9fO6ohP2WYJM9QHmefo3hse7/90myqnvItgSuEpRNc9pXh66MyAI6jBHhaj2MOhszX57YxB7cn/1WcAzsu1Bd3R/OWWHwTYXRY2zybfAAAAAElFTkSuQmCC" />
+</h2>
+
+
+<div class="d-flex align-items-center mb-3">
+
+    <div class="font-semibold fs-2">
+        <div *ngIf="showActive">
+            <h2>Activos</h2>
+        </div>
+
+        <div *ngIf="!showActive">
+            <h3>Inactivos</h3>
+        </div>
+    </div>
+
+    <div class="ms-3">
+        <button (click)="getActive()" class="btn btn-sm btn-primary me-2">Activos</button>
+        <button (click)="loadInactiveTranslations()" class="btn btn-sm btn-outline-secondary">Inactivos</button>
+    </div>
+</div>
+
+
+
+<table class="table">
+    <thead>
+        <th>Input</th>
+        <th>Output</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let translation of pagedTranslations">
+            <td>{{ translation.toTranslator }}: {{ translation.translator }}</td>
+            <td>{{ translation.toTranslation }}: {{ translation.translation }}</td>
+            <td *ngIf="showActive">
+                <button type="button" class="btn btn-sm btn-primary" style="margin-right: 10px;"
+                    (click)="editTranslation(translation)">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-pencil-square" viewBox="0 0 16 16">
+                        <path
+                            d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                        <path fill-rule="evenodd"
+                            d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z" />
+                    </svg>
+                </button>
+                <button (click)="deleteTranslation(translation.id)" class="btn btn-sm btn-danger">delete</button>
+            </td>
+
+            <td *ngIf="!showActive">
+                <button (click)="restoreTranslation(translation.id)" class="btn btn-sm btn-secondary">restore</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="d-flex justify-content-between p-2">
+    <ngb-pagination [collectionSize]="translations.length" [(page)]="page" [pageSize]="pageSize"
+        (pageChange)="refreshPagedTranslations()">
+    </ngb-pagination>
+
+    <select class="form-select" style="width: auto" [(ngModel)]="pageSize" (ngModelChange)="refreshPagedTranslations()">
+        <option [ngValue]="3">3 elementos por página</option>
+        <option [ngValue]="5">5 elementos por página</option>
+        <option [ngValue]="7">7 elementos por página</option>
+    </select>
+</div>

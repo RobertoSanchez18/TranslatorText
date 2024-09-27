@@ -1,0 +1,39 @@
+<form [formGroup]="translationForm">
+    <div class="my-3 row gap-3">
+        <div class="d-flex justify-content-between">
+            <label for="translatorText" class="form-label fw-bold">Detectar Lenguaje</label>
+            <button type="button" class="btn btn-primary w-25" [ngClass]="{'btn-warning': translationData}"
+                (click)="save()">
+                Traducir {{translationData ? 'y actualizar' : 'y guardar'}}
+            </button>
+            @if (translationData) {
+            <button type="button" class="btn btn-secondary" (click)="cancelEdit()">Cancelar</button>
+            }
+        </div>
+        <textarea formControlName="translator" class="form-control textarea" id="translatorText" rows="3"></textarea>
+    </div>
+    <div class="my-3 row gap-3">
+        <div class="d-flex gap-3 align-items-center">
+            <label for="translationText" class="form-label fw-bold">Traducir a:</label>
+            <select formControlName="toTranslation" class="form-select w-25" aria-label="Default select example">
+                <option selected disabled value="">Seleccionar una opción</option>
+                <option value="es">español</option>
+                <option value="en">inglés</option>
+                <option value="de">alemán</option>
+                <option value="fr">francés</option>
+                <option value="it">italiano</option>
+                <option value="ja">japonés</option>
+                <option value="ko">coreano</option>
+                <option value="lb">luxemburgués</option>
+                <option value="pt">portugués</option>
+                <!-- <option value="qc">quechua</option> -->
+                <option value="sq">albanés</option>
+                <option value="th">tailandés</option>
+                <option value="tr">turco</option>
+                <option value="uk">ucraniano</option>
+                <option value="vi">vietnamita</option>
+            </select>
+        </div>
+        <textarea formControlName="translation" class="form-control textarea" id="translationText" readonly></textarea>
+    </div>
+</form>
